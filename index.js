@@ -42,6 +42,7 @@ $("h1").click(function(){
     userPattern = [];
     level = 0;
     nextSequence();
+    $("h2").text("Tap on the tile that blinked");
 });
 
 $(document).keypress(function(){  
@@ -58,12 +59,14 @@ if(pattern[gameLength] === userPattern[gameLength]){
     if(pattern.length === userPattern.length){
         setTimeout(function(){
             nextSequence();
+            $("h2").text("Tap on previously tapped tiles and then the blinked tile");
         },1000)
         userPattern=[];
     }
 }
 else {
     wrongAnswer();
+    $("h2").text("You pressed Wrong Tile!!!");
     Pattern = [];
     userPattern = [];
 }
