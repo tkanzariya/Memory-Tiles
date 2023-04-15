@@ -37,6 +37,12 @@ function  repeatSqeuence(){
     },1000)
 }
 
+$("h1").click(function(){  
+    pattern = [];
+    userPattern = [];
+    level = 0;
+    nextSequence();
+});
 
 $(document).keypress(function(){  
     pattern = [];
@@ -62,6 +68,7 @@ else {
     userPattern = [];
 }
 }
+
 
 $(".btn").click(function(){
     var mouseClick = $(this).attr("id");
